@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: blue;
+    color: aliceblue;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.box{
+    display: flex;
+
+}
+
+.data{
+    font-size: 10px;
+}
+.Infomation{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+.Balance{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+.Infomation{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+textarea{
+    width: 100%;
+}
+.name{
+    font-size: 15px;
+}
+
+input {
+    height: 30px;
+}
