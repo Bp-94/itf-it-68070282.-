@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -22,32 +23,85 @@
         </div>
     </div>
     <hr>
-    <textarea name="" id="" width=""></textarea>
-    <div class="Overview">
-        <h1>Account Overview</h1>
-        <div class="Infomation">
-            <img src="https://cdn-icons-png.flaticon.com/512/5742/5742268.png" alt="" width="100" height="100">
-            <h3>
-                Account Information
-                <p class="name">Name: Panithi Pornsiricharoenpan</p>
-                <p class="name">Type: Saving Account</p>
-            </h3>
-        </div>
-        
-        <div class="Balance">
-            <img src="https://cdn-icons-png.flaticon.com/512/7408/7408050.png" alt="" width="100" height="100">
-            <h3>
-                Current Account<input type="number">
-                <p class="name">Balance:</p>
+    <textarea name="" id="history" width=""></textarea>
+    <div class="conten">
+        <div class="Overview">
+            <h2>Account Overview</h1>
+            <div class="Infomation">
+                <img src="https://cdn-icons-png.flaticon.com/512/5742/5742268.png" alt="" width="100" height="100">
+                <h3>
+                    Account Information
+                    <p class="name">Name: Panithi Pornsiricharoenpan</p>
+                    <p class="name">Type: Saving Account</p>
+                </h3>
+            </div>
+            
+            <div class="Balance">
+                <img src="https://cdn-icons-png.flaticon.com/512/7408/7408050.png" alt="" width="100" height="100">
+                <h3>
+                    Current Account<input type="number" id="accountInput" step="0.01" value="0">
+                    <p class="name">Balance:</p>
+                    
+                    Current Cash <input type="text" id="cashInput" step="0.01" value="0">
+                    <p class="name">Balance:</p>
+                    <button id="setBalancesBtn" onclick="updateBalanceInputs()">
+                        <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front text"> change
+                            </span>
+                    </button>
+                </h3>
+            </div>
+            <div class="Operation">
+                <img src="https://blog.pwskills.com/wp-content/uploads/2024/08/Screenshot-2024-08-16-at-11.45.29%E2%80%AFAM.png" alt="" width="100" height="100">
+                <div class="Op">
+                    <h3>
+                        Bank Operation
+                    </h3>
+                    <select id="toggleBtn">
+                        <option value="deposit">Deposit</option>
+                        <option value="withdraw">Withdraw</option>
+                    </select>
+                    <input type="number" step="0.01" id="opAmount" placeholder="Enter amount">
+                    <button id="proceedBtn" onclick="updateDepoWithd()">
+                        <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front text"> proceed
+                            </span>
+                    </button>
+                    
+                </div>
                 
-                Current Cash <input type="text">
-                <p class="name">Balance:</p>
-                <button>change</button>
-            </h3>
+            </div>
         </div>
-        <div class="Operation">
+        <div class="financial">
+            <h2>Financial Tools</h2>
+            <div class="currency">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQREOGvWJYGOzOO2dd4N2pdadXlRqRedBeiaik22DfApAXh8RtgKiU4_AJ7Q-qOTYZrCKI&usqp=CAU" alt=""width="120" height="100">
+                <div class="Op">
+                    <h2>currency converter</h2>
+                    <h3>
+                        Input balance: <input type="number">
+                    </h3>
+                    <h3>
+                        Output balance: <input type="number">
+                    </h3>
+                    <h3>
+                        Input currency: <select name="" id="">
+                            <option value="USD">USD</option>
+                            <option value="THB">THB</option>
+                        </select><button>
+                            <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front text"> convert
+                            </span>
+                            </button>
 
+                    </h3>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
